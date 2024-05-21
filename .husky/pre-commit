@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+. '.husky/_/husky.sh'
+
+echo 'Estilizando e testando aplicação...'
+
+#Check tsconfig standards
+yarn run format || (echo 'Failed type check', false)
+
+#Check prettier standards
+yarn run check-types || (echo 'Failed prettier check', false)
+
+#Check eslint standards
+yarn run check-lint || (echo 'Failed eslint check', false)
+
+#If everything is ok, try to build
+yarn run build || (echo 'Buildando...', false)
+
+#Check eslint standards
+yarn run build || (echo 'Failed build check', false;)
+
+#If build is ok, we can commit
+(echo 'Tudo certo!', false;)
