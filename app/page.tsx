@@ -29,7 +29,7 @@ export default function Dashboard() {
       </div>
 
       <Button
-        title="Faça seu login"
+        title="Cadastra-se"
         backgroundColor={"none"}
         textColor={"#000"}
         borderProps={"solid 1px #000"}

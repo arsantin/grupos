@@ -6,7 +6,7 @@ export const StyledRequest = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin: 56px auto 56px auto;
+  margin: auto;
   .wrapper-request {
     display: flex;
     justify-content: center;
@@ -39,6 +39,7 @@ export const StyledRequest = styled.div`
   }
   .info-grupos-row {
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
   }

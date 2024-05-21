@@ -17,7 +17,7 @@ export const HeaderDashboard = (): JSX.Element => {
             <p className="back">Voltar</p>
           </div>
           <div className="logo">
-            <Link href="/dashboard">
+            <Link href="/">
               <Image
                 src="/logo-ticket-sports.svg"
                 width={181}
