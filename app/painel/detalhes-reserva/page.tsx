@@ -1,8 +1,7 @@
 "use client";
 
 import { useForm } from "react-hook-form";
-import { WrapperEvent, FormStepOne, CloseButton } from "./styles";
-import axios from "axios";
+import { WrapperEvent, FormStepOne } from "./styles";
 import { TitleBox } from "../../../components/TitleBox";
 
 export default function ReservationDetails() {
