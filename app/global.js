@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
     font-variation-settings: "slnt" 0;    
     background-color: #fff;
   }
+  
   h2{
     font-size: 24px;
   }
@@ -40,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   main{
-    max-width: 960px;
+    max-width: 1400px;
     margin: auto;
     padding: 20px;
   }

@@ -9,34 +9,36 @@ export default function Dashboard() {
 
   return (
     <StyleMain>
-      <h2>Grupos e Acessorias</h2>
-      <p>
-        Quando seu grupo/assessoria/equipe possuir mais de 1 participante(s) e
-        estiver dentro das normas do regulamento oficial do evento.
-      </p>
-      <div className="button">
+      <div className="wrapper-main">
+        <h2>Grupos e Acessorias</h2>
+        <p>
+          Quando seu grupo/assessoria/equipe possuir mais de 1 participante(s) e
+          estiver dentro das normas do regulamento oficial do evento.
+        </p>
+        <div className="button">
+          <Button
+            title="Faça seu login"
+            backgroundColor={"#000"}
+            textColor={"#fff"}
+            hoverColor={"#000"}
+            borderProps={"solid 1px #000"}
+            btnFunction={() => {
+              router?.push("/login");
+            }}
+            paddingProps={"15px"}
+          />
+        </div>
+
         <Button
-          title="Faça seu login"
-          backgroundColor={"#000"}
-          textColor={"#fff"}
-          hoverColor={"#000"}
+          title="Cadastra-se"
+          backgroundColor={"none"}
+          textColor={"#000"}
           borderProps={"solid 1px #000"}
-          btnFunction={() => {
-            router?.push("/login");
-          }}
+          hoverColor={"none"}
+          btnFunction={() => {}}
           paddingProps={"15px"}
         />
       </div>
-
-      <Button
-        title="Cadastra-se"
-        backgroundColor={"none"}
-        textColor={"#000"}
-        borderProps={"solid 1px #000"}
-        hoverColor={"none"}
-        btnFunction={() => {}}
-        paddingProps={"15px"}
-      />
     </StyleMain>
   );
 }

@@ -10,9 +10,7 @@ export default function TemplateDashboard({
 }) {
   return (
     <>
-      <HeaderDashboard />
       <StyleMain>{children}</StyleMain>
-      <Footer />
     </>
   );
 }

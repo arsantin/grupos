@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { StyledLogin } from "./style";
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -17,6 +19,12 @@ export default function Login() {
   const toggleView = () => {
     setView(view === "login" ? "cadastro" : "login");
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      router.push("/painel/solicitacao-de-vagas");
+    }, 2500);
+  }, [router]);
   return (
     <>
       <StyledLogin>

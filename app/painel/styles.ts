@@ -1,18 +1,12 @@
 import styled from "styled-components";
 
-export const StyleMain = styled.div`
+export const StylePainel = styled.div`
   width: calc(100% - 40px);
-  padding: 20px;
+  padding: 70px 20px;
   display: flex;
   margin: auto;
   max-width: 1200px;
   flex-wrap: wrap;
-  .wrapper-main {
-    max-width: 650px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-  }
   h2 {
     font-size: 36px;
     margin: 0px;
@@ -24,6 +18,5 @@ export const StyleMain = styled.div`
   }
   .button {
     margin-right: 15px;
-    width: 130px;
   }
 `;

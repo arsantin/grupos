@@ -2,6 +2,8 @@
 "use client";
 import StyledComponentsRegistry from "./registry";
 import GlobalStyle from "./global";
+import { HeaderDashboard } from "@/components/Header";
+import { Footer } from "@/components/Layout/Footer";
 
 export default function RootLayout({
   children,
@@ -28,7 +30,9 @@ export default function RootLayout({
       <body>
         <StyledComponentsRegistry>
           <GlobalStyle />
-          {children}
+          <HeaderDashboard />
+          <main>{children}</main>
+          <Footer />
         </StyledComponentsRegistry>
       </body>
     </html>
