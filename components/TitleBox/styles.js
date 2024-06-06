@@ -7,4 +7,5 @@ export const AddEventTitles = styled.div`
   flex-basis: 100%;
   height: 25px;
   font-weight: 600;
+  margin-top: 10px;
 `;

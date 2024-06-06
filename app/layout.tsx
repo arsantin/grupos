@@ -2,8 +2,8 @@
 "use client";
 import StyledComponentsRegistry from "./registry";
 import GlobalStyle from "./global";
-import { HeaderDashboard } from "@/components/Header";
 import { Footer } from "@/components/Layout/Footer";
+import { HeaderPainel } from "@/components/HeaderPainel";
 
 export default function RootLayout({
   children,
@@ -30,7 +30,10 @@ export default function RootLayout({
       <body>
         <StyledComponentsRegistry>
           <GlobalStyle />
-          <HeaderDashboard />
+          <header>
+            <HeaderPainel />
+          </header>
+
           <main>{children}</main>
           <Footer />
         </StyledComponentsRegistry>

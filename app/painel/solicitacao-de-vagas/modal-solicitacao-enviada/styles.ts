@@ -6,7 +6,7 @@ export const StyledModal = styled.div`
   padding: 32px;
   background-color: #fff;
   border-radius: 8px;
-  max-width: calc(350px - 64px);
+  max-width: calc(420px - 64px);
   width: calc(100% - 64px);
   align-items: center;
   text-align: center;
@@ -15,6 +15,7 @@ export const StyledModal = styled.div`
   }
   h2 {
     margin: 0px 0px 8px 0px;
+    font-size: 24px;
   }
   p {
     margin: 0px 0px 16px 0px;

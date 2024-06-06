@@ -6,7 +6,7 @@ export const StyledReserve = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin: 56px auto 56px auto;
+  margin: 0px auto 56px auto;
   .wrapper-reserve {
     width: 100%;
     display: flex;
@@ -19,6 +19,7 @@ export const StyledReserve = styled.div`
   .info-reserve {
     display: flex;
     align-items: center;
+    margin: 16px 0px 0px 0px;
   }
   .info-reserve p {
     margin: 0;
@@ -132,5 +133,189 @@ export const StyledReserve = styled.div`
     padding: 16px;
     background-color: transparent;
     border-radius: 8px;
+  }
+  .search .perguntas {
+    background-color: #fbbc05;
+    border: none;
+    margin: 0px 24px 0px 0px;
+    font-weight: 600;
+  }
+  form {
+    width: 100%;
+    position: relative;
+  }
+  .title-list {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0px 0px 8px 0px;
+  }
+  .title-cpf {
+    flex-basis: 16%;
+    margin-left: 19px;
+    display: flex;
+    align-items: center;
+  }
+  .title-atleta {
+    flex-basis: 20%;
+  }
+  .title-email {
+    flex-basis: 18%;
+  }
+  .title-genero {
+    flex-basis: 7%;
+  }
+  .title-nasc {
+    flex-basis: 13%;
+  }
+  .title-cat {
+    flex-basis: 17%;
+  }
+  .title-modali {
+    flex-basis: 19%;
+  }
+  .title-camisa {
+    flex-basis: 5%;
+  }
+  .action {
+    flex-basis: 4%;
+    text-align: right;
+  }
+  .list-reserva {
+    padding: 16px 19px;
+    margin: 0px 0px 4px 0px;
+    width: 100%;
+    border: 1px solid #06060629;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+  }
+  .list-reserva input {
+    background-color: transparent;
+    border: 1px solid #06060679;
+    border-radius: 4px;
+    padding: 5px 0px 5px 7px;
+    font-family: "Inter";
+  }
+  .box-status {
+    width: 5px;
+    height: 80%;
+    background-color: #13ce66;
+    position: absolute;
+    top: 0;
+    left: 0px;
+  }
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+  .list-cpf {
+    flex-basis: 10%;
+    margin-right: 10px;
+    max-width: 125px;
+  }
+  .list-cpf input {
+    max-width: 120px;
+  }
+  .list-atleta {
+    flex-basis: 19%;
+  }
+  .list-atleta input {
+    width: 100%;
+    max-width: 165px;
+  }
+  .list-email {
+    flex-basis: 16%;
+  }
+  .list-email input {
+    max-width: 180px;
+  }
+  .list-genero {
+    flex-basis: 6%;
+    display: flex;
+    justify-content: center;
+  }
+  .list-genero select {
+    width: 100%;
+    max-width: 50px;
+    padding: 3px 0px 3px 7px;
+    border-radius: 4px;
+    background-color: transparent;
+    font-family: "Inter";
+  }
+  .list-data {
+    flex-basis: 12%;
+  }
+  .list-data input {
+    max-width: 106px;
+    padding: 4px 0px 4px 7px;
+  }
+  .list-categoria {
+    flex-basis: 16%;
+  }
+  .list-categoria select {
+    width: 100%;
+    max-width: 150px;
+    padding: 3px 0px 3px 7px;
+    border-radius: 4px;
+    background-color: transparent;
+    font-family: "Inter";
+  }
+  .list-modalidade {
+    flex-basis: 17%;
+  }
+  .list-modalidade input {
+    max-width: 155px;
+  }
+  .list-camisa {
+    flex-basis: 5%;
+  }
+  .list-camisa select {
+    width: 90%;
+    background-color: transparent;
+    border-radius: 4px;
+    font-family: "Inter";
+    padding: 3px 0px 3px 7px;
+  }
+  .icon {
+    display: flex;
+  }
+  .icon img {
+    cursor: pointer;
+  }
+  .btn-add {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .btn-add input {
+    border-radius: 25px;
+    background-color: #fff;
+    color: #060606;
+    padding: 8px 16px;
+    border: 1px solid rgba(6, 6, 6, 0.16);
+    font-weight: 600;
+  }
+  .menu-config {
+    position: absolute;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #fff;
+    left: 95%;
+    top: 80%;
+    width: max-content;
+  }
+  .menu-config p {
+    margin: 8px 0px;
+    cursor: pointer;
+  }
+  .icon-search {
+    background-repeat: no-repeat;
+    background-position: 160px;
+    background-image: url("/icon_search_black.svg");
+    font-family: "Inter";
   }
 `;

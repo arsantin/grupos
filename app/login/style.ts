@@ -3,17 +3,16 @@ import styled from "styled-components";
 export const StyledLogin = styled.div`
   display: flex;
   flex-direction: column;
-  border: 1px solid #06060629;
+  border: 1px solid #d7d7d7;
   border-radius: 16px;
   width: 100%;
   max-width: 440px;
   margin: auto;
   padding: 32px;
   background-color: #fff;
-  h2 {
+  .login-title {
     text-align: center;
-    margin: auto auto 16px auto;
-    font-size: 24px;
+    margin-bottom: 20px;
   }
   form {
     display: flex;
@@ -23,12 +22,7 @@ export const StyledLogin = styled.div`
     display: flex;
     flex-direction: column;
   }
-  form input {
-    border: 1px solid #06060629;
-    padding: 16px;
-    border-radius: 8px;
-    margin: 8px 0px 0px 0px;
-  }
+
   .senha {
     margin: 24px 0px;
   }
@@ -50,21 +44,8 @@ export const StyledLogin = styled.div`
   .criar-conta {
     width: 100%;
     margin: auto;
-  }
-  .criar-conta p {
-    margin: auto;
     text-align: center;
   }
-  .criar-conta input {
-    background-color: #060606;
-    border: none;
-    color: #fff;
-    width: 100%;
-    padding: 16px;
-    border-radius: 8px;
-    margin: 8px 0px 0px 0px;
-  }
-
   .View-cadastro .title h2 {
     margin: 0px 0px 0px 0px;
   }
@@ -87,11 +68,6 @@ export const StyledLogin = styled.div`
     border-right: none;
     border-radius: 8px 0px 0px 8px;
     padding: 0px 16px;
-  }
-  .document .select-document input {
-    width: 100%;
-    border-left: none;
-    border-radius: 0px 8px 8px 0px;
   }
   .senha {
     margin: 16px 0px 0px 0px;

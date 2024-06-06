@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { FooterMainContainer } from "./styles";
 import Image from "next/image";
+import { H4Title } from "design-system-ticket-sports";
 
 export const Footer = () => {
   return (
@@ -48,7 +49,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="column-2">
-          <h3>PARTICIPANTES</h3>
+          <H4Title text="PARTICIPANTES" />
           <ul>
             <li>Login</li>
             <li>Cadastre-se</li>
@@ -59,7 +60,7 @@ export const Footer = () => {
           </ul>
         </div>
         <div className="column-3">
-          <h3>ORGANIZADORES</h3>
+          <H4Title text="ORGANIZADORES" />
           <ul>
             <li>Sobre a plataforma</li>
             <li>Solicite um orçamento</li>
@@ -68,7 +69,7 @@ export const Footer = () => {
           </ul>
         </div>
         <div className="column-4">
-          <h3>GRUPOS E ASSESSORIAS</h3>
+          <H4Title text="GRUPOS E ASSESSORIAS" />
           <ul>
             <li>Cadastre-se</li>
             <li>Central de ajuda</li>
@@ -76,7 +77,7 @@ export const Footer = () => {
           </ul>
         </div>
         <div className="column-4">
-          <h3>EMPRESA</h3>
+          <H4Title text="EMPRESA" />
           <ul>
             <li>Quem somos</li>
             <li>Trabalhe conosco</li>

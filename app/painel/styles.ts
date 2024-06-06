@@ -2,9 +2,7 @@ import styled from "styled-components";
 
 export const StylePainel = styled.div`
   width: calc(100% - 40px);
-  padding: 70px 20px;
   display: flex;
-  margin: auto;
   max-width: 1200px;
   flex-wrap: wrap;
   h2 {

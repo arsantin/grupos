@@ -1,0 +1,26 @@
+.header-painel {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: auto;
+  &__back-button {
+    background-image: url("../../public/arrow-left.svg");
+    background-position: 2px 0px;
+    background-repeat: no-repeat;
+    padding-left: 18px;
+    background-size: contain;
+  }
+  &__logo {
+    width: 182px;
+    margin-right: 32px;
+  }
+  &__help-link {
+    background-color: #ebebeb;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+}

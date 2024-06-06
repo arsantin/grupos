@@ -4,6 +4,7 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  transpilePackages: ["design-system-ticket-sports"],
 };
 
 export default nextConfig;

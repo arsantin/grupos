@@ -23,9 +23,9 @@ const GlobalStyle = createGlobalStyle`
     font-variation-settings: "slnt" 0;    
     background-color: #fff;
   }
-  
-  h2{
-    font-size: 24px;
+  header{
+    width: 100%;
+    background-color: #fff;  
   }
   a{
     text-decoration: none;
@@ -33,13 +33,7 @@ const GlobalStyle = createGlobalStyle`
     &:hover{
       cursor: pointer; 
     }
-  }
-  button{
-    border: none;
-    &:hover{
-      cursor: pointer;
-    }
-  }
+  } 
   main{
     max-width: 1400px;
     margin: auto;

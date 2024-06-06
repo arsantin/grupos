@@ -4,6 +4,7 @@ import { StyledRequest } from "./styles";
 import { useForm } from "react-hook-form";
 import { Dialog } from "@/components/Dialog";
 import { ModalSolicitacao } from "./modal-solicitacao-enviada";
+import { Button } from "design-system-ticket-sports";
 
 export default function RequestVancancies() {
   const {
@@ -61,11 +62,11 @@ export default function RequestVancancies() {
               placeholder="Digite Aqui"
             />
           </div>
-          <input
-            className="enviar"
-            type="submit"
-            value="Enviar solicitação"
-            onClick={() => {
+          <Button
+            size="medium"
+            variation="dark"
+            title="Enviar solicitação"
+            btnfunction={() => {
               setOpenModalRequest(true);
             }}
           />

@@ -85,6 +85,12 @@ export const WrapperEvent = styled.div`
   margin: auto;
   border-radius: 10px;
   position: relative;
+  select {
+    border-radius: 8px;
+    border: 1px solid rgba(6, 6, 6, 0.16);
+    background: #fff;
+    padding: 15px;
+  }
   .css-13cymwt-control {
     height: 45px;
     &:focus {
@@ -164,7 +170,7 @@ export const FormStepOne = styled.div`
   }
   .full {
     flex-basis: 100%;
-    margin: 0px;
+    margin: 0px 0px 10px 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -174,6 +180,9 @@ export const FormStepOne = styled.div`
         margin: 0px 10px;
         height: 15px;
       }
+    }
+    p {
+      margin: 10px 0px;
     }
     .css-b62m3t-container {
       width: 100%;

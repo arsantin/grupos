@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { StyledLogin } from "./style";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
+import { Button, H3Title, Input } from "design-system-ticket-sports";
+import { useState } from "react";
 
 export default function Login() {
   const router = useRouter();
@@ -20,44 +21,39 @@ export default function Login() {
     setView(view === "login" ? "cadastro" : "login");
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      router.push("/painel/solicitacao-de-vagas");
-    }, 2500);
-  }, [router]);
   return (
     <>
       <StyledLogin>
         {view === "login" && (
           <div className="View-login">
-            <h2>Faça o login</h2>
+            <div className="login-title">
+              <H3Title text="Faça o login" />
+            </div>
+
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="email">
-                <label htmlFor="">E-mail ou CPF</label>
-                <input
-                  {...register("Email ou CPF")}
-                  type="text"
-                  placeholder="Digite aqui"
-                />
-              </div>
-              <div className="senha">
-                <label htmlFor="">Senha</label>
-                <input
-                  {...register("Senha")}
-                  type="text"
-                  placeholder="Digite aqui"
-                />
-              </div>
-              <input
-                type="submit"
-                value="Continuar"
-                className="btn-continuar"
+              <Input
+                title="E-mail ou CPF"
+                {...register("Email ou CPF")}
+                inputType="text"
+                placeholderText="Digite aqui"
               />
+              <Input
+                title="Senha"
+                {...register("Senha")}
+                inputType="text"
+                placeholderText="Digite aqui"
+              />
+              <Button isDisabled title="Continuar" size="medium" />
             </form>
             <div className="esqueci-senha">Esqueci minha senha</div>
             <div className="criar-conta">
               <p>Ainda não possui conta? </p>
-              <input type="button" value="Criar conta" onClick={toggleView} />
+              <Button
+                variation="dark"
+                title="Criar conta"
+                btnfunction={toggleView}
+                size="medium"
+              />
             </div>
           </div>
         )}
@@ -124,15 +120,15 @@ export default function Login() {
                   Aceito receber comunicados e notificações
                 </label>
               </div>
-              <input
-                type="submit"
-                id="cal"
-                value="Continuar"
-                className="btn-continuar"
-              />
+              <Button variation="dark" title="Continuar" size="medium" />
             </form>
             <div className="criar-conta">
-              <input type="button" value="Fazer login" onClick={toggleView} />
+              <Button
+                title="Fazer login"
+                btnfunction={toggleView}
+                size="medium"
+                variation="dark"
+              />
             </div>
           </div>
         )}
