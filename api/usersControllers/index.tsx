@@ -7,7 +7,7 @@ export async function usersControllers(
 ): Promise<void> {
   try {
     const usuariosResponse = await usersService();
-    console.log("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK", usuariosResponse);
+    console.log("kkk", usuariosResponse);
     // res.status(usuariosResponse.status).send(usuariosResponse.data);
   } catch (e) {
     console.error(e);
