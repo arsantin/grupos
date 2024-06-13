@@ -1,0 +1,37 @@
+.vacancy-container {
+  text-align: center;
+  margin: auto;
+  max-width: 585px;
+  &__info-grupos {
+    margin: auto;
+    max-width: 310px;
+    text-align: left;
+    width: 100%;
+  }
+  &__wrapper-info {
+    &--group-date {
+      background-color: #d6eeff;
+      padding: 20px;
+      max-width: 270px;
+      width: 100%;
+      margin: auto;
+      border-radius: 8px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    &--paragraph {
+      margin-bottom: 20px;
+    }
+    &--paragraph-two {
+      margin-bottom: 30px;
+    }
+  }
+  .info-grupos-row select {
+    padding: 16px 0px 16px 16px;
+    border-radius: 8px;
+    border: 1px solid #06060629;
+    margin: 8px 0px 16px 0px;
+    width: 100%;
+    font-family: "Inter";
+  }
+}

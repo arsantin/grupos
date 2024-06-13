@@ -10,10 +10,7 @@ export const StylePainel = styled.div`
     margin: 0px;
     flex-basis: 100%;
   }
-  p {
-    flex-basis: 100%;
-    margin-bottom: 25px;
-  }
+
   .button {
     margin-right: 15px;
   }

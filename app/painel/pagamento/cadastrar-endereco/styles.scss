@@ -1,0 +1,41 @@
+.modal-endereco {
+  background-color: #fff;
+  padding: 32px;
+  border-radius: 8px;
+  &__title {
+    display: flex;
+    width: 100%;
+    max-width: 784px;
+    justify-content: space-between;
+  }
+  &__title-wrapper {
+    flex-basis: 80%;
+  }
+  &__form {
+    width: 100%;
+  }
+  &__form--block {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  &__form--block-interno {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  &__form--block-interno div {
+    width: 100%;
+  }
+  &__btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__btn input {
+    width: 100%;
+    max-width: 90px;
+    background-color: #060606;
+    color: #fff;
+  }
+}

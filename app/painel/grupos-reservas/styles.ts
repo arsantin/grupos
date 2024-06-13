@@ -120,6 +120,10 @@ export const StyledReserve = styled.div`
     background-color: #f85449; /* Cor da bolinha */
     border-radius: 50%;
   }
+  .search {
+    display: flex;
+    align-items: center;
+  }
   .search select {
     padding: 16px;
     border-radius: 8px;
@@ -127,18 +131,23 @@ export const StyledReserve = styled.div`
     margin: 0px 24px 0px 0px;
     border: none;
     background-color: #06060619;
+    max-width: 120px;
   }
   .search input {
     border: 1px solid #06060629;
     padding: 16px;
     background-color: transparent;
     border-radius: 8px;
+    max-width: 350px;
+    margin-bottom: 0px;
   }
   .search .perguntas {
     background-color: #fbbc05;
     border: none;
     margin: 0px 24px 0px 0px;
     font-weight: 600;
+    max-width: 180px;
+    color: #060606;
   }
   form {
     width: 100%;
@@ -156,6 +165,9 @@ export const StyledReserve = styled.div`
     margin-left: 19px;
     display: flex;
     align-items: center;
+  }
+  .title-cpf input {
+    margin-bottom: 0px;
   }
   .title-atleta {
     flex-basis: 20%;
@@ -197,6 +209,7 @@ export const StyledReserve = styled.div`
     background-color: transparent;
     border: 1px solid #06060679;
     border-radius: 4px;
+    margin-bottom: 0;
     padding: 5px 0px 5px 7px;
     font-family: "Inter";
   }
@@ -252,6 +265,7 @@ export const StyledReserve = styled.div`
   .list-data input {
     max-width: 106px;
     padding: 4px 0px 4px 7px;
+    margin-bottom: 0px;
   }
   .list-categoria {
     flex-basis: 16%;

@@ -1,0 +1,51 @@
+.modal-standard {
+  width: calc(100% - 64px);
+  max-width: calc(420px - 64px);
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  &__title h3 {
+    margin: 16px 0px 0px 0px;
+  }
+  &__title p {
+    margin: 4px 0px 0px 0px;
+  }
+  &__button {
+    margin: 24px 0px;
+    width: 100%;
+    &--border button {
+      color: #09f;
+      margin: 16px 0px;
+      border: 1px solid #09f;
+    }
+    &--border button:hover {
+      border-bottom: 3px solid #09f;
+    }
+  }
+  &__wrapper-copy {
+    padding: 24px 0px;
+    width: 100%;
+    border: 1px dashed rgba(6, 6, 6, 0.46);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__wrapper-copy p {
+    margin: 4px 0px 0px 0px;
+  }
+  &__wrapper-copy--text {
+    margin-bottom: 0px !important;
+  }
+  &__button-small {
+    display: flex;
+  }
+  &__button-small button:first-child {
+    margin-right: 16px;
+  }
+}

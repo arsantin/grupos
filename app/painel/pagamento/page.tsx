@@ -5,15 +5,27 @@ import { StyledPayment } from "./styles";
 import Image from "next/image";
 import { useState } from "react";
 import { H3Title } from "design-system-ticket-sports";
+import { Dialog } from "@/components/Dialog";
+import { ModalEndereco } from "./cadastrar-endereco";
 
 export default function Payment() {
   const [selectedPayment, setSelectedPayment] = useState(null);
+  const [openModalEndereco, setOpenModalEndereco] = useState<Boolean>(false);
 
   const handleRadioChange = (paymentType: any) => {
     setSelectedPayment(paymentType);
   };
   return (
     <>
+      {openModalEndereco && (
+        <Dialog open={openModalEndereco}>
+          <ModalEndereco
+            setOpenModalEndereco={() => {
+              setOpenModalEndereco(false);
+            }}
+          />
+        </Dialog>
+      )}
       <StyledPayment>
         <div className="title-info">
           <p>2º Juara Race – Evento Beneficente · Reserva 98339</p>
@@ -181,7 +193,13 @@ export default function Payment() {
               </div>
 
               <div className="btn-pedido">
-                <input type="button" value="Finalizar pedido" />
+                <input
+                  type="button"
+                  value="Finalizar pedido"
+                  onClick={() => {
+                    setOpenModalEndereco(true);
+                  }}
+                />
               </div>
             </div>
           </div>

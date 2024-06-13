@@ -7,8 +7,8 @@ import Image from "next/image";
 export const HeaderPainel = (): JSX.Element => {
   return (
     <div className="header-painel">
-      <div>
-        <p className="header-painel__back-button">Voltar</p>
+      <div className="header-painel__back-button">
+        <p>Voltar</p>
       </div>
       <div className="header-painel__logo">
         <Link href="/">

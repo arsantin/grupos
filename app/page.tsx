@@ -1,31 +1,29 @@
 /* eslint-disable @next/next/no-async-client-component */
 "use client";
-import { StyleMain } from "./styles";
+import "./styles.scss";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { Button, H2Title, H3Title, H4Title } from "design-system-ticket-sports";
+import {
+  Button,
+  H2Title,
+  H3Title,
+  H4Title,
+  H5Title,
+} from "design-system-ticket-sports";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Dashboard() {
-  const [faqData, setFaqData] = useState<TrustedHTML>("");
+  const [faqData, setFaqData] = useState<any>("");
   const [faqQuestionsData, setFaqQuestionsData] = useState<any>(null);
   const router = useRouter();
 
   const getFaqData = async () => {
     try {
-      const response = await fetch(
-        "https://api-core-beta.azurewebsites.net/Inscription/v1.0/Group/1922/FaqTopDescription",
-        {
-          headers: {
-            Accept: "application/json",
-            method: "GET",
-          },
-        },
-      );
-      if (response) {
-        const data = await response.json();
-        setFaqData(data?.description);
-      }
+      await axios.get("/api/faq").then(async (res) => {
+        const dados = res.data?.data;
+        setFaqData(dados);
+      });
     } catch (e) {
       console.error(e);
     }
@@ -33,19 +31,10 @@ export default function Dashboard() {
 
   const getFaqQuestionsData = async () => {
     try {
-      const response = await fetch(
-        "https://api-core-beta.azurewebsites.net/v1.0/Faq/list?faqType=2",
-        {
-          headers: {
-            Accept: "application/json",
-            method: "GET",
-          },
-        },
-      );
-      if (response) {
-        const data = await response.json();
-        setFaqQuestionsData(data);
-      }
+      await axios.get("/api/faq/questions").then(async (res) => {
+        const dados = res.data?.data;
+        setFaqQuestionsData(dados);
+      });
     } catch (e) {
       console.error(e);
     }
@@ -54,61 +43,68 @@ export default function Dashboard() {
   useEffect(() => {
     getFaqData();
     getFaqQuestionsData();
-  });
+  }, []);
 
   return (
-    <StyleMain>
-      <div className="wrapper-main">
-        <H2Title text="Grupos e Acessorias" />
-        <div
-          className="html-description"
-          dangerouslySetInnerHTML={{ __html: faqData }}
-        />
-        <p>
-          Quando seu grupo/assessoria/equipe possuir mais de 1 participante(s) e
-          estiver dentro das normas do regulamento oficial do evento.
-        </p>
-        <div className="button">
-          <Button
-            title="Faça seu login"
-            size="medium"
-            btnfunction={() => {
-              router?.push("/login");
-            }}
-            variation="dark"
+    <div className="faq-container">
+      {faqData && faqQuestionsData ? (
+        <>
+          <H2Title text="Grupos e Acessorias" />
+          <div
+            className="faq-container__html-description"
+            dangerouslySetInnerHTML={{ __html: faqData?.description }}
           />
-        </div>
-        <div className="button">
-          <Button
-            title="Cadastre-se"
-            btnfunction={() => {}}
-            size="medium"
-            variation="ghost"
-          />
-        </div>
-        <H3Title text="Perguntas Frequentes" />
-
-        <div className="wrapper-questions">
+          <p className="faq-container__text">
+            Quando seu grupo/assessoria/equipe possuir mais de 1 participante(s)
+            e estiver dentro das normas do regulamento oficial do evento.
+          </p>
+          <div className="faq-container__button">
+            <Button
+              title="Faça seu login"
+              size="medium"
+              btnfunction={() => {
+                router?.push("/login");
+              }}
+              variation="dark"
+            />
+          </div>
+          <div className="faq-container__button">
+            <Button
+              title="Cadastre-se"
+              btnfunction={() => {
+                router.push("/cadastro");
+              }}
+              size="medium"
+              variation="ghost"
+            />
+          </div>
+          <H3Title text="Perguntas Frequentes" />
           {faqQuestionsData?.map((question: any) => {
             return (
               <>
-                <div className="container-q">
-                  <Image
-                    src="arrow-down.svg"
-                    alt="arrow down"
-                    width={12}
-                    height={12}
-                  />
-                  <H4Title text={question?.title} />
-                  <div className="answer-description">
-                    {question?.description || "nenhuma resposta encontrada"}
-                  </div>
-                </div>
+                <details name="question-1" className="faq-container__details">
+                  <summary className="faq-container__details--summary">
+                    <H5Title text={question?.title} />
+                    <Image
+                      src="arrow-down.svg"
+                      alt="arrow down"
+                      width={12}
+                      height={12}
+                    />
+                  </summary>
+                  <p className="faq-container__details--answers">
+                    {question?.description}
+                  </p>
+                </details>
               </>
             );
           })}
+        </>
+      ) : (
+        <div style={{ textAlign: "center", width: "100%" }}>
+          <H4Title text="carregando..." />
         </div>
-      </div>
-    </StyleMain>
+      )}
+    </div>
   );
 }

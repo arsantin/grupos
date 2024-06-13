@@ -4,6 +4,7 @@ import StyledComponentsRegistry from "./registry";
 import GlobalStyle from "./global";
 import { Footer } from "@/components/Layout/Footer";
 import { HeaderPainel } from "@/components/HeaderPainel";
+import { AuthProvider } from "@/context/login";
 
 export default function RootLayout({
   children,
@@ -29,13 +30,15 @@ export default function RootLayout({
       </head>
       <body>
         <StyledComponentsRegistry>
-          <GlobalStyle />
-          <header>
-            <HeaderPainel />
-          </header>
+          <AuthProvider>
+            <GlobalStyle />
+            <header>
+              <HeaderPainel />
+            </header>
 
-          <main>{children}</main>
-          <Footer />
+            <main>{children}</main>
+            <Footer />
+          </AuthProvider>
         </StyledComponentsRegistry>
       </body>
     </html>
